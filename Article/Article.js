@@ -115,7 +115,7 @@ const data = [
 
 */
 
-function createArticle(){
+function createArticle(data){
 // define new elements
   const article = document.createElement('div');
   const title = document.createElement('h2');
@@ -139,14 +139,19 @@ function createArticle(){
   article.appendChild(expandButton);
 
 // set text content
-  title.textContent = 'title';
-  date.textContent = 'date';
-  par1.textContent = 'firstParagraph';
-  par2.textContent = 'secondParagraph';
-  par3.textContent = 'thirdParagraph';
-  expandButton.tabIndex = '\u25bc';
+  title.textContent = 'data.title';
+  date.textContent = 'data.date';
+  par1.textContent = 'data.firstParagraph';
+  par2.textContent = 'data.secondParagraph';
+  par3.textContent = 'data.thirdParagraph';
+  expandButton.textContent = '../assets/menu.png';
+  
 
   return article;
 }
 
 const accordian = document.querySelector('.articles');
+
+data.forEach(data => {
+  articles.appendChild(createArticle(data));
+})
