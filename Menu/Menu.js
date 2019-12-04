@@ -45,6 +45,32 @@ function newMenu(menuItems){
   const music = document.createElement('li');
   const logOut = document.createElement('li');
 
-//
+// set class names
+  menu.classList.add('menu');
 
+// structure of elements
+  menu.appendChild(unordered);
+  unordered.appendChild(students);
+  unordered.appendChild(faculty);
+  unordered.appendChild(whatsNew);
+  unordered.appendChild(techTrends);
+  unordered.appendChild(music);
+  unordered.appendChild(logOut);
+
+// set text content
+  students.textContent = menuItems[0];
+  faculty.textContent = menuItems[1];
+  whatsNew.textContent = menuItems[2];
+  techTrends.textContent = menuItems[3];
+  music.textContent = menuItems[4];
+  logOut.textContent = menuItems[5];
+  document.querySelector('.menu-button').addEventListener('click', event => {
+    menu.classList.toggle('menu--open');
+  })
+
+  return menu;
 }
+const header = document.querySelector('.header');
+menuItems.forEach(data => {
+  header.appendChild(newMenu(menuItems));
+})
