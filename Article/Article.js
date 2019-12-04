@@ -145,7 +145,7 @@ function createArticle(data){
   expandButton.textContent = '\u25bc';
   expandButton.addEventListener('click', event => {
     console.log('button clicked', event.target);
-    expandButton.classList.toggle('.article-open');
+    expandButton.classList.toggle('article-open');
   })
 
   return article;
