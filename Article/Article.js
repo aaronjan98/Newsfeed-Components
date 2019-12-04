@@ -134,7 +134,7 @@ function createArticle(data){
   article.appendChild(par1);
   article.appendChild(par2);
   article.appendChild(par3);
-  article.appendChild(expandButton);
+  article.prepend(expandButton);
 
 // set text content
   title.textContent = data.title;
@@ -145,8 +145,7 @@ function createArticle(data){
   expandButton.textContent = '\u25bc';
   expandButton.addEventListener('click', event => {
     console.log('button clicked', event.target);
-    expandButton.classList.toggle('.expandButton');
-    close.classList.toggle('.close');
+    expandButton.classList.toggle('.article-open');
   })
 
   return article;
