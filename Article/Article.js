@@ -139,6 +139,12 @@ function createArticle(){
   article.appendChild(expandButton);
 
 // set text content
+  title.textContent = 'title';
+  date.textContent = 'date';
+  par1.textContent = 'firstParagraph';
+  par2.textContent = 'secondParagraph';
+  par3.textContent = 'thirdParagraph';
+  expandButton.tabIndex = '\u25bc';
 
   return article;
 }
