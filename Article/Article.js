@@ -88,8 +88,6 @@ const data = [
   }
 ];
 
-// import {Article.less} from '/LESS/index.less';
-
 /* Step 1: Create a function that creates a component. You will want your component to look like the template below: 
   
   <div class="article">
@@ -139,18 +137,22 @@ function createArticle(data){
   article.appendChild(expandButton);
 
 // set text content
-  title.textContent = 'data.title';
-  date.textContent = 'data.date';
-  par1.textContent = 'data.firstParagraph';
-  par2.textContent = 'data.secondParagraph';
-  par3.textContent = 'data.thirdParagraph';
-  expandButton.textContent = '../assets/menu.png';
-  
+  title.textContent = data.title;
+  date.textContent = data.date;
+  par1.textContent = data.firstParagraph;
+  par2.textContent = data.secondParagraph;
+  par3.textContent = data.thirdParagraph;
+  expandButton.textContent = '\u25bc';
+  expandButton.addEventListener('click', event => {
+    console.log('button clicked', event.target);
+    expandButton.classList.toggle('.expandButton');
+    close.classList.toggle('.close');
+  })
 
   return article;
 }
 
-const accordian = document.querySelector('.articles');
+const articles = document.querySelector('.articles');
 
 data.forEach(data => {
   articles.appendChild(createArticle(data));
