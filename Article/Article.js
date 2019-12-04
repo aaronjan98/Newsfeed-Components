@@ -131,6 +131,12 @@ function createArticle(){
   expandButton.classList.add('.expandButton');
 
 // setup structure of the elements
+  article.appendChild(title);
+  article.appendChild(date);
+  article.appendChild(par1);
+  article.appendChild(par2);
+  article.appendChild(par3);
+  article.appendChild(expandButton);
 
 // set text content
 
