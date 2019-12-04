@@ -88,6 +88,8 @@ const data = [
   }
 ];
 
+// import {Article.less} from '/LESS/index.less';
+
 /* Step 1: Create a function that creates a component. You will want your component to look like the template below: 
   
   <div class="article">
@@ -112,3 +114,27 @@ const data = [
   Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
 
 */
+
+function createArticle(){
+// define new elements
+  const article = document.createElement('div');
+  const title = document.createElement('h2');
+  const date = document.createElement('p');
+  const par1 = document.createElement('p');
+  const par2 = document.createElement('p');
+  const par3 = document.createElement('p');
+  const expandButton = document.createElement('span');
+
+// set class names
+  article.classList.add('.article');
+  date.classList.add('.date');
+  expandButton.classList.add('.expandButton');
+
+// setup structure of the elements
+
+// set text content
+
+  return article;
+}
+
+const accordian = document.querySelector('.articles');
